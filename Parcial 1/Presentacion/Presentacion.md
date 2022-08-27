@@ -28,7 +28,7 @@
 
 >**En el Futuro estoy pensando especializarme en *Redes*, pero todavia sigo analizando otras opciones**
 
-### **Hobbies y Deportes que**
+### **Hobbies y Deportes**
 
  Practico deportes como pasatiempo que son:  
 * Karate
