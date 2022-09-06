@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cajaRelativa
+        {
+            position:relative;
+            width: 500px;
+            height: 200px;
+            border: 5px solid lightcoral;
+            margin: 60px;
+            left: 60px;
+            background-color: rgb(241, 176, 176);
+            
+        }
+
+        .cajaAbsoluta
+        {
+            position:absolute;
+            width: 500px;
+            height: 300px;
+            border: 5px solid rgb(248, 40, 40);
+            top: 580px;
+           background-color: rgb(236, 112, 112);
+            left: 500px;
+
+
+        }
+
+        #caja2
+        {
+            left: 70px;
+
+        }
+
+        .cajaFija
+        {
+            position:fixed;
+            width: 200px;
+            height: 150px;
+            border: 5px solid rgb(51, 5, 51);
+            top: 300px;
+          background-color: blueviolet;
+            right:10px ;
+
+        }
+        .sticky
+        {
+            position:sticky;
+            width: 220px;
+            height: 200px;
+            border: 7px solid rgb(38, 67, 230);
+            top: 350px;
+            background-color: rgb(150, 199, 238);
+          left: 150px;
+            right:9px ;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class ="cajaRelativa"></div>
+    <div id="caja2" class="cajaRelativa"></div>
+     <div class="cajaAbsoluta"></div>
+     <div class="cajaFija"></div>
+     <div class="sticky"></div>
+
+
+</body>
+
+
+
+</html>
