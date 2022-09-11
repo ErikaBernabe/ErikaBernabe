@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: rgb(158, 230, 158);
+
+}
+
+
+ul
+{
+list-style: none;
+width: 250px;
+height: 500px;
+}
+
+/*Inicialmente los submenus estan escondidos*/
+ul > li > ul{
+    display: none;
+}
+
+/*Los submenus solo se mostraran cuando el usuario pase el raton sobre las opciones(li:hover) */
+ul > li:hover > ul{
+    display: block;
+    height: 100px;
+}
+.Opcion{
+    background: rgb(22, 150, 50);
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.subOpcion{
+    padding-left: 40px;
+    background: rgb(104, 224, 75);
+    color: white;
+    font-size: 19px;
+}
