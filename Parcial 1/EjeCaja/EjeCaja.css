@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.contenedor{
+   /* display: flex;*/
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(147, 136, 165);
+    text-align: center;
+
+   
+}
+.caja{
+    /* width: 100px;*/
+     height: 100px;
+     background-color: rgb(114, 56, 221);
+     margin: 10px;
+ }
+
+ #caja1{
+    flex-direction: column;
+    display: flex;
+ }
+
+ #caja2{
+    flex-direction: row;
+    display: flex;
+    left: 80px;
+    width: 1350px;
+    height: 3000px;
+ }
