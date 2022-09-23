@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+
+    
+
+}
+
+.contenedor{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    display: grid;
+
+    grid-template-columns: 100px, 100px,100px;
+    grid-template-rows: 20px, 70px, 10px;
+    grid-auto-flow: column;
+     grid-template-areas: enca;
+
+    justify-content: center;
+    align-content: stretch;
+   
+
+}
+
+.caja{
+   /* width: 100px;*/
+    height: 100px;
+    background-color: aqua;
+    text-align: center;
+    border: 0ch red;
+
+}
+
+/*#caja1{
+    background-color: antiquewhite;
+}*/
+
+#enca{grid-area: enca;}
+
+
+@media screen and (){
+
+    
+ }
