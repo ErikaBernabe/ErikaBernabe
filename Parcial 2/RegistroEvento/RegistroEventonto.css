@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.contenedor{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(230, 150, 181);
+
+}
+
+.caja{
+    float: left;
+    border: 2px solid rgb(146, 19, 68);
+   /* width: 100px; */
+   width: calc((100% / 6) - 4px);
+    height: 100px;
+    margin: 2px;
+    text-align: center;
+
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px){
+
+    /*Estilos aplicables a pantallas abajo de 800px*/
+    #caja4{
+        clear: left;
+    }
+
+    .caja{
+        width: calc((100% / 3) - 4px);
+
+    }
+
+    
+}
+
+
+@media screen and (max-width: 399px)
+{
+    /*Estilos aplicables solo en el rango  de pixeles  expecificados*/
+   .caja{
+    clear: left;
+    width: calc(100% - 4px);
+   }
+
+   
+
+}
+
+
+
+
+ #caja1, #caja4
+ {
+    text-decoration: underline;
+ }
+
+
