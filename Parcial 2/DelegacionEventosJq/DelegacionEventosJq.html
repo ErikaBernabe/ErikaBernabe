@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delegacion de Evento</title>
-    <link rel="stylesheet" href="DelegacionEvento.css">
-</head>
+    <title>Delegacion de EventoJq</title>
+    <link rel="stylesheet" href="DelegacionEventosJq.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    
 <body>
     <div id="cont" class="contenedor">
         <div id="caja1" class="caja">Caja 1</div>
@@ -17,12 +18,11 @@
         <div id="caja6" class="caja">Caja 6</div>
         <div id="caja7" class="caja">Caja 7</div>
         <div id="caja8" class="caja">Caja 8</div>
-        
        
     </div>
 
     <script>
-        var elemento = document.getElementById("cont");
+       /* var elemento = document.getElementById("cont");
         elemento.addEventListener("click", cambiarCaja);
         function cambiarCaja(evento) {
             console.log(evento);
@@ -34,7 +34,13 @@
             if(evento.target.id == "caja7"){
                 elemento.removeEventListener("click",cambiarCaja);
             }
-        }
+        }*/
+
+        $(document).ready(function() {
+            $("#cont").click(function(evento){
+                $(evento.target).toggleClass("caja");
+            });
+        });
     </script>
 </body>
 </html>
