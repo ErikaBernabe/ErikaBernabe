@@ -1,0 +1,31 @@
+*{ 
+    margin:auto ;
+ }
+
+#col1{
+    border: 1px solid #53a39f;
+    background-color: #ee99ee5e;
+    color: #a3c4e9;
+}
+
+#col2{
+    border: 1px solid #f1bfa6;
+    background-color: #b5e0a857;
+    color: #f0e10c;
+}
+
+#col3{
+    border: 1px solid #e60aa4;
+    background-color: #d80d4a65;
+    color: #f17c9f;
+}
+
+#col4{
+    border: 1px solid #055c05;
+    background-color: #0840446b;
+    color: #b1ee08;
+}
+
+
+
+
