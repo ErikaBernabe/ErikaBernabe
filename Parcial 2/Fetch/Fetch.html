@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> <!--Ruta de JQuery-->
+    <title>fetch</title>
+</head>
+<body>
+
+  <!--Botones-->
+    <button id="btnPeticion">Peticion</button>
+    <button id="btnPeticionJQuery">PeticionJQuery</button>
+    <!--DIV-->
+    <div id="caja"></div>
+
+    <script>
+
+      $ (document).ready(function(){
+
+       
+        //Sin Jquery Boton
+        document.getElementById("btnPeticion").addEventListener("Click", function(){
+
+            fetch("https://api.chucknorris.io/jokes/random")
+            .then(respuesta => respuesta.json())
+          //  .then(datoJson => console.log(datoJson.value));//sin div
+          .then(datoJson => document.getElementById("caja").innerText=datoJson.value);
+        })
+
+
+        //CON  JQuery el boton
+        document.getElementById("btnPeticionJQuery").addEventListener("Click",function(){
+          $.getJSON("https://api.chucknorris.io/jokes/random", function(datoJson){
+            document.getElementById("caja").innerText=datoJson.value
+          });
+        })
+
+      })
+    </script>
+</body>
+</html>
