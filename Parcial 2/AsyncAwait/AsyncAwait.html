@@ -10,14 +10,16 @@
 </head>
 <body>
     
-    <div id="caja"></div>
+    
     <button id="btnPeticionFetch">Peticion</button>
     <button id="btnPeticionFetchAsyncAwait">Peticion</button>
     <button id="btnPeticionJQuery">PeticionJQuery</button>
 
+    <div id="caja"></div>
+
     <script>
 
-       document.getElementById("btnPeticion").addEventListener("Click", function(){
+       document.getElementById("btnPeticionFetch").addEventListener("click", function(){
         fetch("https://api.chucknorris.io/jokes/random")
         .then(respuesta => respuesta.json())
           //  .then(datoJson => console.log(datoJson.value));//sin div
@@ -25,13 +27,13 @@
        })
         //AsyncAwait
         document.getElementById("btnPeticionFetchAsyncAwait").addEventListener("click",async function(){
-            let respuesta=await fetch("")
+            let respuesta=await fetch("https://api.chucknorris.io/jokes/random")
             let datoJson=await respuesta.json();
             document.getElementById("caja").innerText=datoJson.value
 
         })
 
-        document.getElementById("btnPeticionJQuery").addEventListener("Click",function(){
+        document.getElementById("btnPeticionJQuery").addEventListener("click",function(){
           $.getJSON("https://api.chucknorris.io/jokes/random", function(datoJson){
             document.getElementById("caja").innerText=datoJson.value
           });
