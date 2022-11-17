@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <!-- minimo 10 campos, del  tema ue queramos --> 
+
+</head>
+<body>
+    <form >
+        <div class="row">
+           <div class="form.group col-sm-12 col-md-4 col-lg-2" >
+            <label for="idEmpleado" class="form.label">Id</label>
+            <input type="text" class="form.control" id="idEmpleado" aria-describedby="emailHelp">
+           </div>
+
+           <div class="form.group col-sm-12 col-md-8 col-lg-10">
+            <label for="nombreEmpleado" class="form.label">Nombre</label>
+            <input type="text" class="form.control" id="nombreEmpleado">
+           </div>
+        </div>
+       
+
+        <div class="row">
+            <div class="form.group col-sm-12 col-md-6" >
+             <label for="ApPaternoEmpleado" class="form.label">ApPaterno</label>
+             <input type="text" class="form.control" id="ApPaternoEmpleado" aria-describedby="emailHelp">
+            </div>
+ 
+            <div class="form.group col-sm-12 col-md-6">
+             <label for="ApMaternoEmpleado" class="form.label">ApMaterno</label>
+             <input type="text" class="form.control" id="ApMaterno">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form.group col-sm-12 col-md-6 col-lg-4" >
+             <label for="idEmpleado" class="form.label">Id</label>
+             <input type="text" class="form.control" id="idEmpleado" aria-describedby="emailHelp">
+            </div>
+ 
+            <div class="form.group col-sm-12 col-md-6 col-lg-4">
+             <label for="nombreEmpleado" class="form.label">Nombre</label>
+             <input type="text" class="form.control" id="nombreEmpleado">
+            </div>
+
+            <div class="form.group col-sm-12 col-md-12 col-lg-4">
+                <label for="nombreEmpleado" class="form.label">Email</label>
+                <input type="text" class="form.control" id="nombreEmpleado">
+               </div>
+         </div>
+
+
+       <script></script>
+
+       <script>
+
+        //con fetch con promesas
+        document.getElementById("btnGetReg").addEventListener("click",function({
+            
+        fetch('GetRegistro.php')
+        .then(respuesta=>respuesta.json())
+            .then(dato=>displayCampos(dato));
+
+        }));
+
+
+      
+        function displayCampos(reg){
+
+            document.getElementById("idEmpleado").value=reg.id
+            document.getElementById("nombreEmpleado").value=reg.nombre
+
+        }
+
+
+        //con await
+        let respuesta = await fetch('GetRegistro.php');
+        let dato = await respuesta.json();
+        document.getElementById("idEmpleado").value=reg.id
+        document.getElementById("nombreEmpleado").value=reg.nombre
+
+       </script>
+        
+
+
+
+
+    </form>
+</body>
+</html>
